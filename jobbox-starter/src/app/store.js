@@ -8,6 +8,7 @@ const store = configureStore({
         jobs: jobSlice,
         [postSlice.reducerPath]: postSlice.reducer
     },
+    // middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(postSlice.middleware, logger)
     middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(postSlice.middleware)
 })
 
